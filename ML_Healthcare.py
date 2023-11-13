@@ -41,13 +41,13 @@ LE = LabelEncoder()
 
 def get_dataset(dataset_name):
     if dataset_name == "Heart Attack":
-        data = pd.read_csv("https://raw.githubusercontent.com/advikmaniar/ML-Healthcare-Web-App/main/Data/heart.csv")
+        data = pd.read_csv("https://drive.google.com/file/d/1zmFD0fIMpFVhFWCCPMSKgqrsi9CZH_V8/view?usp=sharing")
         st.header("Heart Attack Prediction")
         return data
 
     else:
         data = pd.read_csv(
-            "https://raw.githubusercontent.com/advikmaniar/ML-Healthcare-Web-App/main/Data/BreastCancer.csv")
+            "https://drive.google.com/file/d/1DvY7GXkwKdTwhbrwAuLLKYxTheBlQrZv/view?usp=sharing")
 
         data["diagnosis"] = LE.fit_transform(data["diagnosis"])
         data.replace([np.inf, -np.inf], np.nan, inplace=True)
